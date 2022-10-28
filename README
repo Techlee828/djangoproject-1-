@@ -1,0 +1,47 @@
+this is the project created from the OP stackoverlow post about comparing data. Iam Nooblord828
+
+below is hte "answer" i gave to support OP's post. 
+
+Adding my comment as an answer. Iam supporting this project with OP. We are designing a software controlled irrigation controller that collects flow data in specific watering zones. We are implementing an arduino as a device Driver and a raspberry pi as a single board computer.
+
+To provide off-site remote control our intention is to build a “website “ that can take user input and and command our device remotely.
+
+The hardware is 98% in place with basic functionality.
+
+We are driving the Arduino pins directly with pyfirmata.
+
+This post is about the sensor data collection so I will stick with that portion of our project.
+
+The intention is to only collect data while the device is on. We want to establish a nominal flow value when we turn the device on. Ie engaging a solenoid valve to allow water to flow. When solenoid is on sensors will be on collecting flow data.
+
+Based off of an established nominal flow value we want to “detect” when our flow value gets above or below a specific nominal value with adjustable tolerance's.
+
+We want to trigger a warning to the user when the flow is out of the nominal range.
+
+I assume a bare bones version of this would be to send an email to the user.
+
+We can take that a step further by turning off the solenoid ( pin 4 on the arduino ) when the flow drops or rises into a “critical” range.
+
+For basic functionality we need to load incoming serial data into the Django data base, write logic to compare incoming ( maybe an average ) serial data. Send a warning to user and/or drive arduino pin off or issue an interrupt to the device.
+
+If we can at least get a warning to user, data uploaded and accesible in Django. That would be ideal. I realize driving the arduino will be it’s own battle. Since typically arduinos need a script loaded onto them I am thinking of having “modes” that get uploaded ie an off mode and normal run mode.
+
+The idea is to run this device or 30 mins to an hour at a time collecting data every second.
+
+Eventually we are going to drive the device with on user described times and days.
+
+We have been working on this from both the far device driver end all the way to the user input side. We are getting stuck in between.
+
+Summary:
+
+Arduino is usb connected to desktop ( in place of the pi for now)
+
+Driving arduino with pyfirmata currently ( this cuts arduino IDE out )
+
+We need to get serial data into Django data base.
+
+Logic code to compare data to threshold value.
+
+Send warning to user ( email or http response) email makes since because the user is not going to have the site open waiting for a http response.
+
+Hope this helps

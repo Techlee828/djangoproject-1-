@@ -1,6 +1,9 @@
 this is the project created from the OP stackoverlow post about comparing data. Iam Nooblord828, 
+
 Unedumacated Engineer is my Senior design partner we are 2 out of 5 in our senior design team. we are all educating mostly in hardware design so the software aspect of this project is a stretch for us.
 
+currently "flowdata" is a freshly made django project. with a website app.
+******************************************************************
 below is hte "answer" i gave to support OP's post. 
 
 Adding my comment as an answer. Iam supporting this project with OP. We are designing a software controlled irrigation controller that collects flow data in specific watering zones. We are implementing an arduino as a device Driver and a raspberry pi as a single board computer.

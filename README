@@ -4,6 +4,10 @@ Unedumacated Engineer is my Senior design partner we are 2 out of 5 in our senio
 
 currently "flowdata" is a freshly made django project. with a website app.
 
+pyfirm.py is pyfirmata arduino pin commanding script
+
+serial.py is a pysrial script to access com port and import data to python terminal.
+
 Project soft due date Nov 14th.
 
 Project Hard due date Nov 3oth.

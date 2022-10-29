@@ -1,0 +1,37 @@
+{% extends 'base.html'%}
+{% block title %} Welcome to Project Poseidon {% endblock %}
+{% block content %}
+
+    Hello! the current time is {{current_time}}
+    <hr>
+    There are currently {{num_valves}} valves.
+    <hr>
+    {% for valve in valves %}
+        <h2> {{valve.title}} </h2>
+        <p> {{valve.on}} </p>
+    {% endfor%}
+
+{% endblock %}
+
+</head>
+<body>
+    <main role="main" class ="container">
+    </div>
+    <div class = "col-md-4">
+        <div class = "conten-section">
+            <h3 id = "stat-main-title">Commands</h3>
+            <p class = 'text-muted'></p>
+
+                <li class = "list-group-item list-group-item-light">
+                    <h4 class="stat-title">Function:</h4>
+
+                    <form action = "/commandposeidon">
+                        <button id="start-btn" class = "btn"> Do it</button>
+
+                    </form>
+
+                </li>
+        </div>
+    </div>
+    </main>
+</body>
